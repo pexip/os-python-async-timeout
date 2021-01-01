@@ -1,0 +1,62 @@
+python-async-timeout (3.0.1-1.1) unstable; urgency=medium
+
+  * Non maintainer upload by the Reproducible Builds team.
+  * No source change upload to rebuild on buildd with .buildinfo files.
+
+ -- Holger Levsen <holger@debian.org>  Fri, 01 Jan 2021 16:53:24 +0100
+
+python-async-timeout (3.0.1-1) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * Convert git repository from git-dpm to gbp layout
+
+  [ Piotr Ożarowski ]
+  * New upstream release
+  * Standards-Version bumped to 4.3.0 (no changes needed)
+
+ -- Piotr Ożarowski <piotr@debian.org>  Sun, 30 Dec 2018 22:02:56 +0100
+
+python-async-timeout (3.0.0-1) unstable; urgency=medium
+
+  [ Ondřej Nový ]
+  * d/control: Set Vcs-* to salsa.debian.org
+  * d/copyright: Use https protocol in Format field
+
+  [ Piotr Ożarowski ]
+  * New upstream release
+
+ -- Piotr Ożarowski <piotr@debian.org>  Wed, 16 May 2018 14:02:22 +0200
+
+python-async-timeout (2.0.0-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Piotr Ożarowski <piotr@debian.org>  Mon, 13 Nov 2017 21:23:23 +0100
+
+python-async-timeout (1.4.0-1) unstable; urgency=medium
+
+  * New upstream release
+  * Standards-Version bumped to 4.1.1 (no changes needed)
+
+ -- Piotr Ożarowski <piotr@debian.org>  Fri, 29 Sep 2017 11:01:35 +0200
+
+python-async-timeout (1.2.1-1) unstable; urgency=medium
+
+  * New upstream release
+  * Standards-Version bumped to 4.0.0 (no changes needed)
+
+ -- Piotr Ożarowski <piotr@debian.org>  Tue, 20 Jun 2017 19:42:24 +0200
+
+python-async-timeout (1.1.0-1) unstable; urgency=medium
+
+  * New upstream release
+  * Update debian/watch to reflect async_timeout → async-timeout upstream
+    project rename
+
+ -- Piotr Ożarowski <piotr@debian.org>  Tue, 08 Nov 2016 00:35:32 +0100
+
+python-async-timeout (1.0.0-1) unstable; urgency=low
+
+  * Initial release
+
+ -- Piotr Ożarowski <piotr@debian.org>  Wed, 21 Sep 2016 00:04:29 +0200
