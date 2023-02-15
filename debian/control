@@ -3,22 +3,30 @@ Section: python
 Priority: optional
 Maintainer: Pexip AS <packaging@pexip.com>
 XSBC-Pexip-Original-Maintainer: Piotr Ożarowski <piotr@debian.org>
-XSBC-Pexip-Original-Uploaders: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
-Build-Depends: debhelper (>= 9), dh-python,
-               python3-all,
-               python3-setuptools,
-               python3-pytest-runner,
-Standards-Version: 4.3.0
+XSBC-Pexip-Original-Uploaders:
+  Debian Python Team <team+python@tracker.debian.org>,
+Build-Depends:
+ debhelper-compat (= 13),
+ dh-python,
+ python3-all,
+ python3-pytest-runner,
+ python3-setuptools,
+ python3-typing-extensions,
+Standards-Version: 4.6.0
 Homepage: https://github.com/aio-libs/async_timeout/
-Vcs-Git: https://salsa.debian.org/python-team/modules/python-async-timeout.git
-Vcs-Browser: https://salsa.debian.org/python-team/modules/python-async-timeout
+Vcs-Git: https://salsa.debian.org/python-team/packages/python-async-timeout.git
+Vcs-Browser: https://salsa.debian.org/python-team/packages/python-async-timeout
 XS-Pexip-Upstream: http://ftp.debian.org/debian/ bookworm
 
 Package: python3-async-timeout
 Architecture: all
-Depends: ${misc:Depends}, ${python3:Depends},
-Recommends: ${python3:Recommends}
-Suggests: ${python3:Suggests}
+Depends:
+ ${misc:Depends},
+ ${python3:Depends},
+Recommends:
+ ${python3:Recommends},
+Suggests:
+ ${python3:Suggests},
 Description: timeout context manager for asyncio programs in Python
  The context manager is useful in cases when you want to apply timeout
  logic around block of code or in cases when asyncio.wait_for() is

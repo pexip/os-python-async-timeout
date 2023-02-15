@@ -1,7 +1,7 @@
 async-timeout
 =============
-.. image:: https://travis-ci.org/aio-libs/async-timeout.svg?branch=master
-    :target: https://travis-ci.org/aio-libs/async-timeout
+.. image:: https://travis-ci.com/aio-libs/async-timeout.svg?branch=master
+    :target: https://travis-ci.com/aio-libs/async-timeout
 .. image:: https://codecov.io/gh/aio-libs/async-timeout/branch/master/graph/badge.svg
     :target: https://codecov.io/gh/aio-libs/async-timeout
 .. image:: https://img.shields.io/pypi/v/async-timeout.svg
@@ -22,7 +22,7 @@ logic around block of code or in cases when ``asyncio.wait_for()`` is
 not suitable. Also it's much faster than ``asyncio.wait_for()``
 because ``timeout`` doesn't create a new task.
 
-The ``timeout(timeout, *, loop=None)`` call returns a context manager
+The ``timeout(delay, *, loop=None)`` call returns a context manager
 that cancels a block on *timeout* expiring::
 
    async with timeout(1.5):
@@ -37,6 +37,20 @@ that cancels a block on *timeout* expiring::
 *timeout* parameter could be ``None`` for skipping timeout functionality.
 
 
+Alternatively, ``timeout_at(when)`` can be used for scheduling
+at the absolute time::
+
+   loop = asyncio.get_event_loop()
+   now = loop.time()
+
+   async with timeout_at(now + 1.5):
+       await inner()
+
+
+Please note: it is not POSIX time but a time with
+undefined starting base, e.g. the time of the system power on.
+
+
 Context manager has ``.expired`` property for check if timeout happens
 exactly in context manager::
 
@@ -49,6 +63,22 @@ timeout context manager.
 
 If ``inner()`` call explicitly raises ``TimeoutError`` ``cm.expired``
 is ``False``.
+
+The scheduled deadline time is available as ``.deadline`` property::
+
+   async with timeout(1.5) as cm:
+       cm.deadline
+
+Not finished yet timeout can be rescheduled by ``shift_by()``
+or ``shift_to()`` methods::
+
+   async with timeout(1.5) as cm:
+       cm.shift(1)  # add another second on waiting
+       cm.update(loop.time() + 5)  # reschedule to now+5 seconds
+
+Rescheduling is forbidden if the timeout is expired or after exit from ``async with``
+code block.
+
 
 Installation
 ------------

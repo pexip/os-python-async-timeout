@@ -1,3 +1,36 @@
+python-async-timeout (4.0.2-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Piotr Ożarowski <piotr@debian.org>  Mon, 07 Nov 2022 14:42:42 +0100
+
+python-async-timeout (4.0.1-1) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Ondřej Nový ]
+  * Use debhelper-compat instead of debian/compat.
+  * d/control: Update Vcs-* fields with new Debian Python Team Salsa
+    layout.
+
+  [ Debian Janitor ]
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+
+  [ Sandro Tosi ]
+  * Use the new Debian Python Team contact name and address
+
+  [ Boyuan Yang ]
+  * debian/: Apply wrap-and-sort -abst.
+  * debian/watch: Switch to monitor GitHub upstream.
+  * New upstream version 4.0.1.
+  * Bump debhelper compat to v13.
+  * debian/control: Bump Standards-Version to 4.6.0.
+  * debian/control: Add new test and runtime dependency
+    python3-typing-extensions.
+
+ -- Boyuan Yang <byang@debian.org>  Thu, 25 Nov 2021 22:47:02 -0500
+
 python-async-timeout (3.0.1-1.1pexip1) pexip; urgency=medium
 
   * Prepare Pexip packaging
