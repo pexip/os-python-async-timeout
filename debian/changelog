@@ -1,3 +1,9 @@
+python-async-timeout (4.0.2-1pexip2) pexip; urgency=medium
+
+  * No-change version bump
+
+ -- Huw Jones <huw@pexip.com>  Tue, 21 Feb 2023 17:37:20 +0000
+
 python-async-timeout (4.0.2-1pexip1) pexip; urgency=medium
 
   * New upstream version
